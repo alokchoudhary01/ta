@@ -2,7 +2,7 @@
 
 It is a Technical Analysis library to financial time series datasets (open, close, high, low, volume). You can use it to do feature engineering from financial datasets. It is builded on Python Pandas library.
 
-![alt text](https://raw.githubusercontent.com/alokchoudhry01/ta/images/figure.png)
+![alt text](https://github.com/alokchoudhary01/ta/blob/master/images/figure.png)
 
 The library has implemented 31 indicators:
 
