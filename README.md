@@ -2,7 +2,7 @@
 
 It is a Technical Analysis library to financial time series datasets (open, close, high, low, volume). You can use it to do feature engineering from financial datasets. It is builded on Python Pandas library.
 
-![alt text](https://raw.githubusercontent.com/bukosabino/ta/master/doc/figure.png)
+![alt text](https://raw.githubusercontent.com/alokchoudhry01/ta/master/doc/figure.png)
 
 The library has implemented 31 indicators:
 
@@ -64,7 +64,7 @@ https://technical-analysis-library-in-python.readthedocs.io/en/latest/
 $ pip install ta
 ```
 
-To use this library you should have a financial time series dataset including “Timestamp”, “Open”, “High”, “Low”, “Close” and “Volume” columns.
+To use this library you should have a financial time series dataset including "Timestamp", "Open", "High", "Low", "Close" and "Volume" columns.
 
 You should clean or fill NaN values in your dataset before add technical analysis features.
 
@@ -72,16 +72,16 @@ You should clean or fill NaN values in your dataset before add technical analysi
 
 ```python
 import pandas as pd
-from ta import *
+import ta as ta
 
 # Load datas
 df = pd.read_csv('your-file.csv', sep=',')
 
 # Clean NaN values
-df = utils.dropna(df)
+#df = utils.dropna(df)
 
 # Add ta features filling NaN values
-df = add_all_ta_features(df, "Open", "High", "Low", "Close", "Volume_BTC", fillna=True)
+df = ta.add_all_ta_features(df, "Open", "High", "Low", "Close", "Volume_BTC", fillna=True)
 ```
 
 
@@ -89,19 +89,24 @@ df = add_all_ta_features(df, "Open", "High", "Low", "Close", "Volume_BTC", filln
 
 ```python
 import pandas as pd
-from ta import *
+import matplotlib.pyplot as plt
+import ta as ta
 
-# Load datas
-df = pd.read_csv('your-file.csv', sep=',')
+df = pd.read_csv('your-file.csv',sep=',')
 
-# Clean NaN values
-df = utils.dropna(df)
+print(df.columns)
 
-# Add bollinger band high indicator filling NaN values
-df['bb_high_indicator'] = bollinger_hband_indicator(df["Close"], n=20, ndev=2, fillna=True)
+# Add bollinger band high indicator filling Nans values
+df['bb_high_indicator'] = ta.bollinger_hband_indicator(df["close"], n=20, ndev=2,fillna=True)
 
-# Add bollinger band low indicator filling NaN values
-df['bb_low_indicator'] = bollinger_lband_indicator(df["Close"], n=20, ndev=2, fillna=True)
+# Add bollinger band low indicator filling Nans values
+df['bb_low_indicator'] = ta.bollinger_lband_indicator(df["close"], n=20, ndev=2,fillna=True)
+
+print(df.columns)
+
+df.plot()
+plt.show()
+
 ```
 
 
@@ -110,7 +115,6 @@ df['bb_low_indicator'] = bollinger_lband_indicator(df["Close"], n=20, ndev=2, fi
 ```sh
 $ git clone https://github.com/alokchoudhry01/ta.git
 $ cd ta
-$ pip install -r dev-requirements.txt
 $ cd dev
 $ python BollingerBandFeature.py
 ```
@@ -133,4 +137,4 @@ Developed by Alok Choudhary contributors: https://github.com/alokchoudhry01/ta/
 
 Please, let me know about any comment or feedback.
 
-Also, I am a software freelance focused on Data Science using Python tools such as Pandas, Scikit-Learn, Backtrader, Zipline or Catalyst. Don't hesitate to contact me if you need something related with this library, Python, Technical Analysis, AlgoTrading, Machine Learning, etc.
+Also, I am a Software Consultant focused on Data Science using Python tools such as Pandas, Scikit-Learn, Backtrader. Don't hesitate to contact me if you need something related with this library, Python, Technical Analysis, AlgoTrading, Machine Learning, etc.
