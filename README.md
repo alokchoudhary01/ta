@@ -133,8 +133,8 @@ $ python BollingerBandFeature.py
 
 # Credits:
 
-Developed by Alok Choudhary contributors: https://github.com/alokchoudhry01/ta/
+Developed by Alok Choudhary
 
-Please, let me know about any comment or feedback.
+I am a Software Consultant focused on Data Science using Python tools such as Pandas, Scikit-Learn, Backtrader. Don't hesitate to contact me if you need something related with this library, Python, Technical Analysis, AlgoTrading, Machine Learning, etc.
 
-Also, I am a Software Consultant focused on Data Science using Python tools such as Pandas, Scikit-Learn, Backtrader. Don't hesitate to contact me if you need something related with this library, Python, Technical Analysis, AlgoTrading, Machine Learning, etc.
+Please, let me know if you have any comment or feedback.
