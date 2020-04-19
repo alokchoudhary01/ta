@@ -138,3 +138,6 @@ Developed by Alok Choudhary
 I am a Software Consultant focused on Data Science using Python tools such as Pandas, Scikit-Learn, Backtrader. Don't hesitate to contact me if you need something related with this library, Python, Technical Analysis, AlgoTrading, Machine Learning, etc.
 
 Please, let me know if you have any comment or feedback.
+
+@AlokChoudhory
+
